@@ -1,27 +1,27 @@
 # generator-polymer-init-2-x-app [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> A starting point for building apps with Polymer 2.0-preview
+> A Yeoman generator that scaffolds a [Polymer 2.0-preview](https://github.com/polymer/polymer/tree/2.0-preview) application template
 
-## Installation
+### Setup
 
-First, install [Yeoman](http://yeoman.io) and generator-polymer-init-2-x-app using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+##### Prerequisites
 
-```bash
-npm install -g yo
-npm install -g generator-polymer-init-2-x-app
-```
+First, install 
+[Polymer CLI](https://www.polymer-project.org/1.0/docs/tools/polymer-cli)
+and generator-polymer-init-2-x-app using 
+[npm](https://www.npmjs.com/) 
+(we assume you have pre-installed [node.js](https://nodejs.org/)).
 
-Then generate your new project:
+    npm install -g polymer-cli
+    npm install -g generator-polymer-init-2-x-app
 
-```bash
-yo polymer-init-2-x-app
-```
+##### Initialize project from template
 
-## Getting To Know Yeoman
+Generate your new project using `polymer init`:
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+    mkdir my-app
+    cd my-app
+    polymer init 2-x-app
+
 
 ## License
 

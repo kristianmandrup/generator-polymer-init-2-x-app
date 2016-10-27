@@ -15,7 +15,7 @@
   "keywords": [
     "yeoman-generator",
     "polymer",
-    "web-component"
+    "web-components"
   ],
   "dependencies": {
     "chalk": "^1.0.0",

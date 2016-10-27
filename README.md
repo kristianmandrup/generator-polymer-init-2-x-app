@@ -41,7 +41,7 @@ Generate your new project using `polymer init`:
 
 ## License
 
-BSD-3-Clause © [Tony Trinh](https://github.com/tony19)
+MIT © [Tony Trinh](https://github.com/tony19)
 
 
 [npm-image]: https://badge.fury.io/js/generator-polymer-init-2-x-app.svg

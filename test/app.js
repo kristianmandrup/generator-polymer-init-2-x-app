@@ -12,7 +12,7 @@ describe('generator-polymer-init-2-x-app:app', function () {
 
   it('creates files', function () {
     assert.file([
-      'dummyfile.txt'
+      'bower.json'
     ]);
   });
 });

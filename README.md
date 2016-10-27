@@ -1,6 +1,21 @@
 # generator-polymer-init-2-x-app [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > A Yeoman generator that scaffolds a [Polymer 2.0-preview](https://github.com/polymer/polymer/tree/2.0-preview) application template
 
+Given an app-name of "x-foo" and default settings, this generator outputs the following directory structure:
+
+    x-foo
+    ├── README.md
+    ├── bower.json
+    ├── index.html
+    ├── manifest.json
+    ├── package.json
+    ├── src
+    │   └── x-foo-app
+    │       └── x-foo-app.html
+    └── test
+        └── x-foo-app
+            └── x-foo-app_test.html
+
 ### Setup
 
 ##### Prerequisites

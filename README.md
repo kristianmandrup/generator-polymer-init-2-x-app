@@ -1,9 +1,10 @@
 # generator-polymer-init-2-x-app [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > A Yeoman generator that scaffolds a [Polymer 2.0-preview](https://github.com/polymer/polymer/tree/2.0-preview) application template
 
-Given an app-name of "x-foo" and default settings, this generator outputs the following directory structure:
+Given an app-name of "x-foo" and default answers to the prompts, this
+generator outputs the following directory structure:
 
-    x-foo
+    .
     ├── README.md
     ├── bower.json
     ├── index.html
@@ -22,7 +23,7 @@ Given an app-name of "x-foo" and default settings, this generator outputs the fo
 
 First, install 
 [Polymer CLI](https://www.polymer-project.org/1.0/docs/tools/polymer-cli)
-and generator-polymer-init-2-x-app using 
+and `generator-polymer-init-2-x-app` using
 [npm](https://www.npmjs.com/) 
 (we assume you have pre-installed [node.js](https://nodejs.org/)).
 

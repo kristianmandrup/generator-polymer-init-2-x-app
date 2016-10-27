@@ -1,4 +1,4 @@
-# generator-polymer-init-2-x-app [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-polymer-init-2-x-app [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 > A Yeoman generator that scaffolds a [Polymer 2.0-preview](https://github.com/polymer/polymer/tree/2.0-preview) application template
 
 Given an app-name of "x-foo" and default answers to the prompts, this

@@ -47,5 +47,5 @@
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "license": "BSD-3-Clause"
+  "license": "MIT"
 }

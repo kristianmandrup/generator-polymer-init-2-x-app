@@ -35,7 +35,6 @@ Given an app-name of "x-foo", this generator outputs the following directory str
 
 **Usage:**
 
-    mkdir my-app
     cd my-app
     polymer init
     # select the `2.0-el` generator from the list

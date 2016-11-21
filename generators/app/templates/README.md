@@ -2,6 +2,9 @@
 
 <%= description %>
 
+*NOTE: This template depends on [Polymer 2.0-preview](https://github.com/polymer/polymer/tree/2.0-preview),
+which is not yet fully supported on all browsers. The newest version of Chrome is recommended.*
+
 ## Install the Polymer-CLI
 
 First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.

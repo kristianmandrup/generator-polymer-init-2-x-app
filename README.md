@@ -1,8 +1,19 @@
 # generator-polymer-init-2-x-app [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
-> A Yeoman generator that scaffolds a [Polymer 2.0-preview](https://github.com/polymer/polymer/tree/2.0-preview) application template
+> Yeoman generators that scaffold templates for a [Polymer 2.0-preview](https://github.com/polymer/polymer/tree/2.0-preview) app
 
-Given an app-name of "x-foo" and default answers to the prompts, this
-generator outputs the following directory structure:
+### Generators
+
+#### `2.0-app` generator
+
+*A blank application template*
+
+**Usage:**
+
+    mkdir my-app
+    cd my-app
+    polymer init 2-x-app
+
+Given an app-name of "x-foo", this generator outputs the following directory structure:
 
     .
     ├── README.md
@@ -17,11 +28,81 @@ generator outputs the following directory structure:
         └── x-foo-app
             └── x-foo-app_test.html
 
+
+#### `2.0-el` generator
+
+*A blank element template (to be used in the blank application template). Not an element-project template.*
+
+**Usage:**
+
+    mkdir my-app
+    cd my-app
+    polymer init
+    # select the `2.0-el` generator from the list
+
+*NOTE: With [Polymer CLI #472](https://github.com/Polymer/polymer-cli/pull/472), you'd be able to run `polymer init 2-x-app:el`.*
+
+Given an element-name of "x-el", this generator outputs the following directory structure:
+
+    .
+    ├── src
+    │   └── x-el
+    │       └── x-el.html
+    └── test
+        └── x-el
+            └── x-el_test.html
+
+
+#### `2.0-starter-kit` generator
+
+*A starter application template, with navigation and "PRPL pattern" loading*
+
+**Usage:**
+
+    mkdir my-app
+    cd my-app
+    polymer init
+    # select the `2.0-starter-kit` generator from the list
+
+*NOTE: With [Polymer CLI #472](https://github.com/Polymer/polymer-cli/pull/472), you'd be able to run `polymer init 2-x-app:starter-kit`.*
+
+Given a namespace of "zzz", this generator outputs the following directory structure:
+
+    .
+    ├── README.md
+    ├── bower.json
+    ├── images
+    │   ├── favicon.ico
+    │   └── manifest
+    │       ├── icon-144x144.png
+    │       ├── icon-192x192.png
+    │       ├── icon-48x48.png
+    │       ├── icon-512x512.png
+    │       ├── icon-72x72.png
+    │       └── icon-96x96.png
+    ├── index.html
+    ├── manifest.json
+    ├── polymer.json
+    ├── service-worker.js
+    ├── src
+    │   ├── zzz-app.html
+    │   ├── zzz-icons.html
+    │   ├── zzz-view1.html
+    │   ├── zzz-view2.html
+    │   ├── zzz-view3.html
+    │   ├── zzz-view404.html
+    │   └── shared-styles.html
+    ├── sw-precache-config.js
+    └── test
+        ├── index.html
+        └── zzz-view1.html
+
+
 ### Setup
 
 ##### Prerequisites
 
-First, install 
+Install
 [Polymer CLI](https://www.polymer-project.org/1.0/docs/tools/polymer-cli)
 and `generator-polymer-init-2-x-app` using
 [npm](https://www.npmjs.com/) 
@@ -29,14 +110,6 @@ and `generator-polymer-init-2-x-app` using
 
     npm install -g polymer-cli
     npm install -g generator-polymer-init-2-x-app
-
-##### Initialize project from template
-
-Generate your new project using `polymer init`:
-
-    mkdir my-app
-    cd my-app
-    polymer init 2-x-app
 
 
 ## License

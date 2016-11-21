@@ -1,58 +1,50 @@
 'use strict';
-var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
+const yeoman = require('yeoman-generator');
+const chalk = require('chalk');
+const glob = require('glob');
 
 module.exports = yeoman.Base.extend({
-  // initializing: function () {
-  //   // Yeoman replaces dashes with spaces. We want dashes.
-  //   this.appname = this.appname.replace(/\s+/g, '-');
-  // },
-  //
-  // prompting: function () {
-  //   let _this = this;
-  //   let prompts = [
-  //     {
-  //       name: 'name',
-  //       type: 'input',
-  //       message: `Application name`,
-  //       default: this.appname,
-  //     },
-  //     {
-  //       type: 'input',
-  //       name: 'elementName',
-  //       message: `Main element name`,
-  //       default: (answers) => `${answers.name}-app`,
-  //       validate(name) {
-  //         let nameContainsHyphen = name.includes('-');
-  //         if (!nameContainsHyphen) {
-  //           _this.log('\nUh oh, custom elements must include a hyphen in '
-  //             + 'their name. Please try again.');
-  //         }
-  //         return nameContainsHyphen;
-  //       },
-  //     },
-  //     {
-  //       type: 'input',
-  //       name: 'description',
-  //       message: 'Brief description of the application',
-  //     },
-  //   ];
-  //   // typings is out of date
-  //   return this.prompt(prompts).then((props) => {
-  //     this.props = props;
-  //     this.props.classname = _dashToTitleCase(this.props.elementName);
-  //   });
-  // },
 
-  writing: function () {
-    // let elementName = this.props.elementName;
-    // this.fs.copyTpl(`${this.templatePath()}/**/?(.)!(_)*`, this.destinationPath(), this.props);
-    // this.fs.copyTpl(this.templatePath('src/_element/_element.html'), `src/${elementName}/${elementName}.html`, this.props);
-    // this.fs.copyTpl(this.templatePath('test/_element/_element_test.html'), `test/${elementName}/${elementName}_test.html`, this.props);
-    this.fs.copy(`${this.templatePath()}/**/?(.)!(_)*`, this.destinationPath());
+  prompting: function() {
+    const prompts = [
+      {
+        name: 'ns',
+        type: 'input',
+        message: `Application namespace, prefixed to all element names`,
+        default: 'my',
+      },
+    ];
+
+    return this.prompt(prompts).then((props) => {
+      props.ns = props.ns.replace(/\W+/g, '-').toLowerCase();
+      this.props = props;
+    });
   },
 
-  install: function () {
+  writing: function() {
+    const ns = this.props.ns;
+
+    const copyOptions = {
+      globOptions: {ignore: '**/images/**/*'}
+    };
+    this.fs.copyTpl(`${this.templatePath()}/**/?(.)!(_)*`, this.destinationPath(), this.props, null, copyOptions);
+
+    glob(`${this.templatePath()}/**/_ns-*`, (err, matches) => {
+      if (err) {
+        this.log(chalk.bold.red(err));
+        return;
+      }
+
+      const tmplPathLen = this.templatePath().length;
+      for (const filename of matches) {
+        // hydrate "_ns" in filenames, and remove leading slash (path should be relative to destination dir)
+        const dest = filename.substring(tmplPathLen).replace('_ns-', `${ns}-`).replace(/^\//, '');
+        this.fs.copyTpl(filename, dest, this.props);
+      }
+    });
+  },
+
+  install: function() {
     this.log(chalk.bold('\nProject generated!'));
     this.log('Installing dependencies...');
     this.installDependencies({
@@ -65,12 +57,3 @@ module.exports = yeoman.Base.extend({
     this.log('Check out your new project README for information about what to do next.\n');
   }
 });
-
-// function _dashToTitleCase(dash) {
-//   const camel = dash.indexOf('-') < 0 ? dash : dash.replace(/-[a-z]/g,
-//     function(m) {
-//       return m[1].toUpperCase();
-//     }
-//   );
-//   return camel.charAt(0).toUpperCase() + camel.substr(1);
-// }

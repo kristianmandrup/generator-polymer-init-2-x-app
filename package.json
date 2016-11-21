@@ -1,7 +1,7 @@
 {
   "name": "generator-polymer-init-2-x-app",
   "version": "0.0.2",
-  "description": "A starting point for building apps with Polymer 2.0-preview",
+  "description": "Starter templates for Polymer 2.0-preview",
   "homepage": "",
   "author": {
     "name": "Tony Trinh",
@@ -11,7 +11,7 @@
   "files": [
     "generators"
   ],
-  "main": "generators/index.js",
+  "main": "generators/app/index.js",
   "keywords": [
     "yeoman-generator",
     "polymer",

@@ -48,11 +48,7 @@ module.exports = yeoman.Base.extend({
   },
 
   install: function () {
-    this.log(chalk.bold('\nProject generated!'));
-    this.log('Installing dependencies...');
-    this.installDependencies({
-      npm: false,
-    });
+    this.log(chalk.bold('\nElement generated!'));
   }
 });
 

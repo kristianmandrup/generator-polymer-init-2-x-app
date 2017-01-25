@@ -1,9 +1,9 @@
 'use strict';
-var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
-var yosay = require('yosay');
+const Generator = require('yeoman-generator');
+const chalk = require('chalk');
+const yosay = require('yosay');
 
-module.exports = yeoman.Base.extend({
+module.exports = Generator.extend({
 
   initializing: function () {
     // Yeoman replaces dashes with spaces. We want dashes.

@@ -1,10 +1,9 @@
-'use strict';
-var path = require('path');
-var assert = require('yeoman-assert');
-var helpers = require('yeoman-test');
+const path = require('path');
+const assert = require('yeoman-assert');
+const helpers = require('yeoman-test');
 
-describe('generator-polymer-init-2-x-app:el', function () {
-  before(function () {
+describe('generator-polymer-init-2-x-app:el', () => {
+  before(() => {
     return helpers.run(path.join(__dirname, '../generators/el'))
       .withPrompts({
         name: 'x-foo'
@@ -12,7 +11,7 @@ describe('generator-polymer-init-2-x-app:el', function () {
       .toPromise();
   });
 
-  it('creates files', function () {
+  it('creates files', () => {
     assert.file([
       'src/x-foo/x-foo.html',
       'test/x-foo/x-foo_test.html'

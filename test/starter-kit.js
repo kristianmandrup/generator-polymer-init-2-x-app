@@ -1,16 +1,16 @@
 'use strict';
-var path = require('path');
-var assert = require('yeoman-assert');
-var helpers = require('yeoman-test');
+const path = require('path');
+const assert = require('yeoman-assert');
+const helpers = require('yeoman-test');
 
-describe('generator-polymer-init-2-x-app:stater-kit', function () {
-  before(function () {
+describe('generator-polymer-init-2-x-app:stater-kit', () => {
+  before(() => {
     return helpers.run(path.join(__dirname, '../generators/starter-kit'))
       .withPrompts({ns: 'zzz'})
       .toPromise();
   });
 
-  it('creates files', function () {
+  it('creates files', () => {
     assert.file([
       'bower.json',
       'index.html',

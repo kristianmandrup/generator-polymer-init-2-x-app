@@ -1,6 +1,7 @@
 {
   "name": "polymer-starter-kit",
   "version": "2.1.1",
+  "license": "MIT",
   "description": "(2.0-preview) starter application template",
   "devDependencies": {
     "polymer-cli": "github:tony19-contrib/polymer-cli#dist-new-build-flags"

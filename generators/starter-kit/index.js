@@ -1,9 +1,9 @@
 'use strict';
-const yeoman = require('yeoman-generator');
+const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const glob = require('glob');
 
-module.exports = yeoman.Base.extend({
+module.exports = Generator.extend({
 
   prompting: function() {
     const prompts = [
@@ -49,6 +49,8 @@ module.exports = yeoman.Base.extend({
     this.log('Installing dependencies...');
     this.installDependencies({
       npm: false,
+      bower: true,
+      yarn: true
     });
   },
 

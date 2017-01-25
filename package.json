@@ -13,7 +13,6 @@
     "generators/el",
     "generators/starter-kit"
   ],
-  "main": "generators/app/index.js",
   "keywords": [
     "yeoman-generator",
     "polymer",

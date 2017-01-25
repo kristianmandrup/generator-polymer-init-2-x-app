@@ -18,18 +18,20 @@ $ polymer serve
 ## Building Your Application
 
 ```
-$ polymer build
+$ yarn build
 ```
 
-This will create a `build/` folder with `bundled/` and `unbundled/` sub-folders
-containing a bundled (Vulcanized) and unbundled builds, both run through HTML,
-CSS, and JS optimizers.
+*Note this project uses the `new-build-flags` branch of the `polymer-cli` repo,
+which supports ES6 minification. The current beta release of `polymer-cli@next`
+(0.18.0-alpha.8) fails when it tries to pipe ES6 through Uglify. This version
+of `polymer-cli` can take a few seconds longer than usual to initally render
+the results on polyfilled browsers.*
 
 You can serve the built versions by giving `polymer serve` a folder to serve
 from:
 
 ```
-$ polymer serve build/bundled
+$ polymer serve build
 ```
 
 ## Running Tests

@@ -52,29 +52,21 @@ routing for the app:
 
 ### Build
 
-This command performs HTML, CSS, and JS minification on the application
-dependencies, and generates a service-worker.js file with code to pre-cache the
-dependencies based on the entrypoint and fragments specified in `polymer.json`.
-The minified files are output to the `build/unbundled` folder, and are suitable
-for serving from a HTTP/2+Push compatible server.
+This command creates the build output in the `build/` directory:
 
-In addition the command also creates a fallback `build/bundled` folder,
-generated using fragment bundling, suitable for serving from non
-H2/push-compatible servers or to clients that do not support H2/Push.
+    yarn build
 
-    polymer build
+*Note this project uses the `new-build-flags` branch of the `polymer-cli` repo,
+which supports ES6 minification. The current beta release of `polymer-cli@next`
+(0.18.0-alpha.8) fails when it tries to pipe ES6 through Uglify. This version
+of `polymer-cli` can take a few seconds longer than usual to initally render
+the results on polyfilled browsers.*
 
 ### Preview the build
 
-This command serves the minified version of the app at `http://localhost:8080`
-in an unbundled state, as it would be served by a push-compatible server:
+This command serves `build/` at `http://localhost:8080`:
 
-    polymer serve build/unbundled
-
-This command serves the minified version of the app at `http://localhost:8080`
-generated using fragment bundling:
-
-    polymer serve build/bundled
+    polymer serve build
 
 ### Run tests
 
@@ -91,4 +83,4 @@ e.g. based on the route, or to progressively render non-critical sections
 of the application.  Each new demand-loaded fragment should be added to the
 list of `fragments` in the included `polymer.json` file.  This will ensure
 those components and their dependencies are added to the list of pre-cached
-components (and will have bundles created in the fallback `bundled` build).
+components.

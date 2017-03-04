@@ -8,11 +8,11 @@
     "src/<%= ns %>-view404.html"
   ],
   "sources": [
-   "src/**/*",
-   "images/**/*",
-   "bower.json"
+    "src/**/*"
   ],
   "extraDependencies": [
+    "images/**/*",
+    "bower.json",
     "manifest.json",
     "bower_components/webcomponentsjs/src/post-polyfill.js",
     "bower_components/webcomponentsjs/src/pre-polyfill.js",

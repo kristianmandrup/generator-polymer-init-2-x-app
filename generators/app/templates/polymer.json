@@ -1,10 +1,10 @@
 {
   "entrypoint": "index.html",
   "sources": [
-   "src/**/*",
-   "bower.json"
+    "src/**/*"
   ],
   "extraDependencies": [
+    "bower.json",
     "manifest.json",
     "bower_components/URL/url.js",
     "bower_components/custom-elements/custom-elements.min.js",

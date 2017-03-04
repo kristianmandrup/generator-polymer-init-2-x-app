@@ -1,5 +1,7 @@
 # generator-polymer-init-2-x-app [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
-> Yeoman generators that scaffold templates for a [Polymer 2.0.0-rc.1](https://github.com/Polymer/polymer/releases/tag/v2.0.0-rc.1) app
+> Yeoman generators that scaffold templates for a [Polymer 2.0.0-rc.1](https://github.com/Polymer/polymer/releases/tag/v2.0.0-rc.1) app.
+
+> *This is a **temporary** project until the Polymer CLI and Polymer Starter Kit projects fully transition to Polymer 2.0.*
 
 ### Quick Start
 
@@ -24,6 +26,18 @@ and `generator-polymer-init-2-x-app` using
 
 
 ### Generators
+
+The following generators can be found when running Polymer CLI's `init` command:
+
+```shell
+$ polymer init
+? Which starter template would you like to use? 
+❯ 2.0-app - (2.0 preview) blank application template 
+  2.0-el - (2.0 preview) blank element template 
+  2.0-starter-kit - (2.0 preview) starter application template
+```
+
+To skip the menu prompt, you can use the internal generator name in the `init` command, which do not match the names shown in the `init` menu. Refer to the generator usages below.
 
 #### `2.0-app` generator
 

@@ -9,19 +9,20 @@
   </template>
 
   <script>
-    customElements.define('<%= name %>', class extends Polymer.Element {
-      static get is() { return '<%= name %>'; }
+    class <%= classname %> extends Polymer.Element {
+      static get is() { return '<%= elementName %>'; }
 
       static get config() {
         return {
           properties: {
             prop1: {
               type: String,
-              value: '<%= name %>'
+              value: '<%= elementName %>'
             }
           }
         };
       }
-    });
+    }
+    customElements.define(<%= classname %>.is, <%= classname %>);
   </script>
 </dom-module>

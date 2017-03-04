@@ -11,7 +11,7 @@
   </template>
 
   <script>
-    customElements.define('<%= elementName %>', class extends Polymer.Element {
+    class <%= classname %> extends Polymer.Element {
       static get is() { return '<%= elementName %>'; }
 
       static get config() {
@@ -24,6 +24,7 @@
           }
         };
       }
-    });
+    }
+    customElements.define(<%= classname %>.is, <%= classname %>);
   </script>
 </dom-module>

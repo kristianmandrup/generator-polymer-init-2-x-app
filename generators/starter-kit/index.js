@@ -29,6 +29,8 @@ module.exports = Generator.extend({
     };
     this.fs.copyTpl(`${this.templatePath()}/**/?(.)!(_)*`, this.destinationPath(), this.props, null, copyOptions);
 
+    this.fs.copy(this.templatePath('images'), this.destinationPath('images'));
+
     glob(`${this.templatePath()}/**/_ns-*`, (err, matches) => {
       if (err) {
         this.log(chalk.bold.red(err));

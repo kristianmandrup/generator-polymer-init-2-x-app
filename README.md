@@ -1,15 +1,27 @@
 # generator-polymer-init-2-x-app [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 > Yeoman generators that scaffold templates for a [Polymer 2.0.0-rc.1](https://github.com/Polymer/polymer/releases/tag/v2.0.0-rc.1) app
 
-### Setup
+### Quick Start
 
-Install
+ 1. Install
 [Polymer CLI](https://www.polymer-project.org/1.0/docs/tools/polymer-cli)
 and `generator-polymer-init-2-x-app` using
-[npm](https://www.npmjs.com/) (assuming you've pre-installed [node.js](https://nodejs.org/)) or `yarn`.
+[npm](https://www.npmjs.com/) or `yarn`.
 
-    npm install -g polymer-cli@next               # 0.18.0-pre.10 or newer
-    npm install -g generator-polymer-init-2-x-app
+        npm install -g polymer-cli@next      # 0.18.0-pre.10 or newer
+        npm install -g generator-polymer-init-2-x-app
+
+ 2. Create a starter-kit:
+
+        mkdir psk
+        cd psk
+        polymer init 2-x-app:starter-kit
+
+ 3. Build the app, and open a browser to it:
+
+        polymer build
+        polymer serve -o build/default
+
 
 ### Generators
 

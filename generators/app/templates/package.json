@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "license": "MIT",
   "description": "Application template (2.0-preview)",
-  "devDependencies": {
-    "polymer-cli": "github:tony19-contrib/polymer-cli#dist-new-build-flags"
-  },
   "scripts": {
     "build": "polymer build"
   }

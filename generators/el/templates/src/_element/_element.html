@@ -10,14 +10,14 @@
 
   <script>
     class <%= classname %> extends Polymer.Element {
-      static get is() { return '<%= elementName %>'; }
+      static get is() { return '<%= name %>'; }
 
       static get config() {
         return {
           properties: {
             prop1: {
               type: String,
-              value: '<%= elementName %>'
+              value: '<%= name %>'
             }
           }
         };

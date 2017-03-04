@@ -1,7 +1,7 @@
 # generator-polymer-init-2-x-app [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 > Yeoman generators that scaffold templates for a [Polymer 2.0.0-rc.1](https://github.com/Polymer/polymer/releases/tag/v2.0.0-rc.1) app.
 
-> *This is a **temporary** project until the Polymer CLI and Polymer Starter Kit projects fully transition to Polymer 2.0.*
+> *This is a __temporary__ project until the Polymer CLI and Polymer Starter Kit projects fully transition to Polymer 2.0.*
 
 ### Quick Start
 

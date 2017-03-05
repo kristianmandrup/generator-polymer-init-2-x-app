@@ -8,7 +8,7 @@
  1. Install
 [Polymer CLI](https://www.polymer-project.org/1.0/docs/tools/polymer-cli)
 and `generator-polymer-init-2-x-app` using
-[npm](https://www.npmjs.com/) or `yarn`.
+[`npm`](https://www.npmjs.com/) or [`yarn`](https://yarnpkg.com/).
 
         npm install -g polymer-cli@next      # 0.18.0-pre.10 or newer
         npm install -g generator-polymer-init-2-x-app
@@ -37,7 +37,7 @@ $ polymer init
   2.0-starter-kit - (2.0 preview) starter application template
 ```
 
-To skip the menu prompt, you can use the internal generator name in the `init` command, which do not match the names shown in the `init` menu. Refer to the generator usages below.
+To skip the menu prompt, you can use the internal generator names in the `init` command, which do not match the names shown in the `init` menu. Refer to the generator usages below.
 
 #### `2.0-app` generator
 

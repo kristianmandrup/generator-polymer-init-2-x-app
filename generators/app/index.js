@@ -47,7 +47,7 @@ module.exports = Generator.extend({
 
   writing: function () {
     let elementName = this.props.elementName;
-    this.fs.copyTpl(`${this.templatePath()}/**/?(.)!(_)*`, this.destinationPath(), this.props);
+    this.fs.copyTpl(`${this.templatePath()}/**/!(_)*`, this.destinationPath(), this.props);
     this.fs.copyTpl(this.templatePath('src/_element/_element.html'), `src/${elementName}/${elementName}.html`, this.props);
     this.fs.copyTpl(this.templatePath('test/_element/_element_test.html'), `test/${elementName}/${elementName}_test.html`, this.props);
   },

@@ -27,8 +27,7 @@ module.exports = Generator.extend({
     const copyOptions = {
       globOptions: {ignore: '**/images/**/*'}
     };
-    this.fs.copyTpl(`${this.templatePath()}/**/?(.)!(_)*`, this.destinationPath(), this.props, null, copyOptions);
-
+    this.fs.copyTpl(`${this.templatePath()}/**/!(_)*`, this.destinationPath(), this.props, null, copyOptions);
     this.fs.copy(this.templatePath('images'), this.destinationPath('images'));
 
     glob(`${this.templatePath()}/**/_ns-*`, (err, matches) => {

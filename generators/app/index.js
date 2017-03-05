@@ -57,8 +57,7 @@ module.exports = Generator.extend({
     this.log('Installing dependencies...');
     this.installDependencies({
       npm: false,
-      bower: true,
-      yarn: true
+      bower: true
     });
   },
 

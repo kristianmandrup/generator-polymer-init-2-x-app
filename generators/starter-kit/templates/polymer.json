@@ -1,4 +1,13 @@
 {
+  "builds": [
+    {
+      "addServiceWorker": true,
+      "swPrecacheConfig": "sw-precache-config.js",
+      "js": {"minify": true},
+      "css": {"minify": true},
+      "html": {"minify": true}
+    }
+  ],
   "entrypoint": "index.html",
   "shell": "src/<%= ns %>-app.html",
   "fragments": [

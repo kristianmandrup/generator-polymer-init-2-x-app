@@ -63,9 +63,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <!-- Built with love using Polymer Starter Kit -->
 
     <!-- temporarily disable feature testing for polyfills -->
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
     <script>
-      /*
       // Setup Polymer options
       window.Polymer = {
         dom: 'shadow',
@@ -75,6 +73,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       // Load webcomponentsjs polyfill if browser does not support native Web Components
       (() => {
+        console.log('loading...')
+
         const onload = () => {
           // For native Imports, manually fire WebComponentsReady so user code
           // can use the same code path for native and polyfill'd imports.
@@ -91,21 +91,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           && 'content' in document.createElement('template')
         );
 
+        console.log('webComponentsSupported', webComponentsSupported)
+
         if (!webComponentsSupported) {
+          console.log('webComponents NOT supported, using polyfill')
+
           const script = document.createElement('script');
           script.async = true;
-          script.src = 'bower_components/webcomponentsjs/webcomponents-lite.min.js';
+          script.src = 'bower_components/webcomponentsjs/webcomponents-lite.js';
           script.onload = onload;
           document.head.appendChild(script);
         } else {
+          console.log('webComponents ARE supported, NOT using polyfill')
           onload();
         }
       })();
-      */
+
 
       // Load pre-caching Service Worker
       if ('serviceWorker' in navigator) {
+        console.log('Service workers ARE supported');
         window.addEventListener('load', function() {
+          console.log('Registering service worker');
           navigator.serviceWorker.register('service-worker.js');
         });
       }

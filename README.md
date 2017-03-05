@@ -24,6 +24,22 @@ and `generator-polymer-init-2-x-app` using
         polymer build
         polymer serve -o build/default
 
+### Browser support
+
+The *Starter kit app* has been tested successfully on the following browsers:
+- Chrome 59 (Canary)
+- Chrome 56
+- Safari 10
+- Firefox 51
+- Brave 0.13.5
+
+### Troubleshooting
+
+If you are having problems in your browser it could be a problem with a conflicting browser extension wreaking havoc.
+
+We have seen the following error on a Chrome 58 browser with a ~20 extensions enabled.
+
+`Cannot read property 'localName' of undefined`
 
 ### Generators
 
@@ -32,40 +48,11 @@ The following generators can be found when running Polymer CLI's `init` command:
 ```shell
 $ polymer init
 ? Which starter template would you like to use? 
-❯ 2.0-app - (2.0 preview) blank application template 
-  2.0-el - (2.0 preview) blank element template 
+❯ 2.0-el - (2.0 preview) blank element template 
   2.0-starter-kit - (2.0 preview) starter application template
 ```
 
 To skip the menu prompt, you can use the internal generator names in the `init` command, which do not match the names shown in the `init` menu. Refer to the generator usages below.
-
-#### `2.0-app` generator
-
-*A blank application template*
-
-> **NOTE**: The `polymer-cli` (`v0.18.0-pre.10`) now supports a 2.0 application template. Use that instead.
-
-**Usage:**
-
-    mkdir my-app
-    cd my-app
-    polymer init 2-x-app
-
-Given an app-name of "x-foo", this generator outputs the following directory structure:
-
-    .
-    ├── README.md
-    ├── bower.json
-    ├── index.html
-    ├── manifest.json
-    ├── package.json
-    ├── src
-    │   └── x-foo-app
-    │       └── x-foo-app.html
-    └── test
-        └── x-foo-app
-            └── x-foo-app_test.html
-
 
 #### `2.0-el` generator
 
